@@ -5,29 +5,25 @@ jobs:
       - image: circleci/node:8.9
     steps:
       - checkout
-      - run:  # Corrected spacing
+      - run: # Corrected spacing
           name: Say Hello
           command: echo "A first hello"
-          
+
   sally:
     docker:
       - image: circleci/node:8.9
     steps:
       - checkout
-      - run:  # Corrected spacing
+      - run: # Corrected spacing
           name: Double Trouble
           command: echo "Double trouble"
-          
+
 workflows:
   version: 2
   bobby_sally:
     jobs:
       - bobby
       - sally
-
-
-
-
 # # This config was automatically generated from your source code
 # # Stacks detected: deps:node:.
 # version: 2.1
